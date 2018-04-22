@@ -1,0 +1,82 @@
+* Reading Notes
+  :PROPERTIES:
+  :CREATED:  [2018-04-21 Sat 20:44]
+  :ID:       1b8e14fa-d142-4a0b-b14d-78825874e7db
+  :END:
+
+  Intended to be lightly noted
+** Chapter 1
+   :PROPERTIES:
+   :CREATED:  [2018-04-21 Sat 20:44]
+   :ID:       5f6c327f-722a-4e84-a466-862591e1a2cf
+   :END:
+
+   1. Increment is a statement, not an expression (p5f)
+
+      #+BEGIN_SRC go
+      j = i++  // Not legal
+      #+END_SRC
+
+   2. For loop C-like form (p6)
+      #+BEGIN_SRC go
+      for initialization; condition; post {
+          // 0 or more statements
+      }
+      #+END_SRC
+
+      Any of initialization, condition, and post may be omitted. 
+      
+      If only the condition give, no semis are needed and we have a
+      while loop:
+      #+BEGIN_SRC go
+      for condition {
+          // infinite loop unless return, break, etc.
+      }
+      #+END_SRC
+
+      See [[file:/home/brian/code/go/the_go_programming_language/ch01_tutorial/echo1.go][echo1.go]].
+
+   3. Iterator form of for (p6)
+      See [[file:/home/brian/code/go/the_go_programming_language/ch01_tutorial/echo2.go][echo2]]
+
+      The form produces a pair of values, the index and the item at that
+      index. If the index is not needed, use `_`; an otherwise unused
+      variable is a compilation error.
+      
+
+   4. Various assignment forms (p7)
+      #+BEGIN_SRC go
+      s := ""
+      var s string
+      var s = ""
+      var s string = ""
+      #+END_SRC
+   
+      These are all equivalent [well, *not quite*]. (The second sets s
+      to the "zero-value" string.)
+
+      The first two are preferred. The first can occur only in
+      functions, not package-level variables.
+
+      Third form rarely used save for multiple variables declared at
+      once.
+
+      Advice to use the first form to indicate that the initial value
+      matters and the second to say that it does not.
+      
+      
+* Exercises to Come Back to
+  :PROPERTIES:
+  :CREATED:  [2018-04-21 Sat 20:40]
+  :ID:       fc7855e6-239d-47f1-91e1-c0d373ba87c9
+  :END:
+** TODO Ex 1.3
+   :LOGBOOK:  
+   - State "TODO"       from ""           [2018-04-21 Sat 20:40]
+   :END:      
+   :PROPERTIES:
+   :CREATED:  [2018-04-21 Sat 20:40]
+   :ID:       1065ad89-1bae-49ef-969d-8cde7bdee0c9
+   :END:
+   
+   Task is to do timings, but fwd refs to Sections 1.6 and 11.4. So, later.
